@@ -125,7 +125,7 @@ module.exports =
     # Execute faker {{name.lastname}} etc
     expandedData = @executeFaker expandedData
     # Exec function
-    expandedData = @executeFunctions expandedData
+    # expandedData = @executeFunctions expandedData
     return expandedData
 
 
