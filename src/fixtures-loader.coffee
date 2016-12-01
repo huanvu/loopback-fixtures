@@ -38,7 +38,10 @@ module.exports =
 
 
   purgeModel: (model) ->
-    new Promise (resolve, reject) ->
+    new Promise (resolve, reject) =>
+      if !model.destroyAll 
+        resolve()
+
       model.destroyAll (err) ->
         reject err if err
         resolve()
